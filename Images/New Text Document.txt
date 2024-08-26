@@ -1,0 +1,29 @@
+<div
+                        class=" card lg:card-side lg:flex shadow-xl rounded-2xl lg:w-[573px] h-[218px] bg-white border border-inherit">
+                        <figure>
+                            <img src="Images/5.png" alt="">
+                        </figure>
+
+                        <div class="lg:ml-5 card card-body">
+                            <div class="lg:flex">
+                                <img class="mr-2" src="Images/star.svg" alt="">
+                                <p class="text-[16px] not-italic font-medium leading-normal opacity-60 mr-4">5.0</p>
+                                <img class="mr-2" src="Images/eye.png" alt="">
+                                <p class="text-[16px] not-italic font-medium leading-normal opacity-60 mr-4">20</p>
+                                <img class="mr-2" src="Images/love.png" alt="">
+                                <p class="text-[16px] not-italic font-medium leading-normal opacity-60">200</p>
+                            </div>
+                            <h3 class="lg:mt-3  text-[20px] not-italic font-extrabold leading-normal">World Cup Flags
+                                Football</h3>
+                            <p
+                                class="lg:mt-3 lg:w-[306px] text-[16px] not-italic font-medium leading-[26px] opacity-60">
+                                Dolor sit amet consectetur. Ut urna diam quis sagittis. </p>
+                            <div class="lg:flex lg:mt-4">
+                                <p class=" text-[#FF4240] text-[18px] not-italic font-extrabold leading-[26px] mr-5">
+                                    Price - $22.00</p>
+                                <img class="mr-2" src="Images/cart.svg" alt="">
+                                <p class="text-[16px] not-italic font-medium leading-normal opacity-60">Delivery Fee :
+                                    Free</p>
+                            </div>
+                        </div>
+                    </div>

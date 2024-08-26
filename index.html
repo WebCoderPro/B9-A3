@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hockey</title>
+    <!-- Tailwind & Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Manrope google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Tailwind custom color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font style -->
+    <Style>
+        .font-manrope {
+            font-family: "Manrope", sans-serif;
+        }
+
+        .border {
+            border: 2px solid tomato;
+        }
+    </Style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="container font-manrope lg:mt-14 lg:w-[93%] lg:mx-w-[1170px] lg:ml-10">
+                <div class="navbar bg-base-100">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="0"
+                                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow ml-24">
+                                <li><a href="">Home</a></li>
+                                <li><a href="">About</a></li>
+                                <li><a href="">Pages</a></li>
+                                <li><a href="">Blog</a></li>
+                                <li><a href="">Contract</a></li>
+                            </ul>
+                        </div>
+                        <h1 class="btn btn-ghost text-2xl lg:text-4xl font-extrabold leading-normal">Hockey<span
+                                class="text-[#FF4240]">’</span>s</h1>
+                    </div>
+                    <div class="navbar-center hidden lg:flex ml-24">
+                        <ul class="menu menu-horizontal px-1">
+                            <li class="text-[#FF4240] text-[16px] font-bold leading-normal"><a href="">Home</a></li>
+                            <li class="text-[16px] font-normal leading-normal"><a href="">About</a></li>
+                            <li class="text-[16px] font-normal leading-normal"><a href="">Pages</a></li>
+                            <li class="text-[16px] font-normal leading-normal"><a href="">Blog</a></li>
+                            <li class="text-[16px] font-normal leading-normal"><a href="">Contract</a></li>
+                        </ul>
+                    </div>
+
+                    <div class=" hidden lg:flex lg:ml-48">
+                        <button class="btn btn-ghost btn-circle lg:visible">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="navbar-end w-36">
+                        <a
+                            class="btn bg-[#FF4240] text-[#FFF] w-[124px] h-[40px] px-4 py-2 lg:px-6 lg:py-4 lg:w-36 lg:h-12">Get
+                            Ticket</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container font-manrope ml-12 mt-12 ">
+            <div class="carousel w-[95%] mx-w-[1170px]">
+
+
+                <div id="slide1" class="carousel-item  w-full">
+
+                    <div
+                        class=" bg-[url(./Images/Regtangle.jpeg)] bg-no-repeat bg-cover rounded-xl lg:rounded-2xl w-[350px] h-[230px] lg:h-[550px] lg:w-[1170px]">
+
+                        <div
+                            class="absolute bg-[#131318] w-[350px] h-[140px]  rounded-xl px-4 py-4 mt-[245px] lg:w-[566px] lg:h-[165px] lg:rounded-2xl lg:px-8 lg:py-8 lg:ml-[572px] lg:mt-[353px]">
+
+                            <h3
+                                class="text-[#FFF] text-[18px] mb-[0] lg:text-[24px] not-italic font-extrabold leading-normal">
+                                Meet all the heroes from the field</h3>
+                            <p
+                                class="text-[#FFF] text-[14px] leading-6 mt-2 lg:text-[16px] not-italic font-medium lg:leading-[26px] opacity-30 lg:mt-4 ">
+                                Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor.
+                                Purus urna in sit nullam proin. </p>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="absolute">
+                        <a href="#slide4"
+                            class="btn btn-circle  bg-[#131318] text-[#FFF] border-none mt[158px] ml-[128px] lg:mt-[478px] lg:ml-8">❮</a>
+
+                        <a href="#slide2"
+                            class="btn btn-circle  bg-[#131318] text-[#FFF] border-none mt-[158px] mr-[133px] lg:ml-4">❯</a>
+                    </div>
+                </div>
+
+
+                <div id="slide2" class="carousel-item relative w-full">
+
+                    <img src="Images/hokey player.png"
+                        class="rounded-2xl w-[350px] h-[230px]  lg:h-[550px] lg:w-[1170px]" />
+
+                    <div class="absolute">
+                        <a href="#slide1"
+                            class="btn btn-circle  bg-[#131318] text-[#FFF] border-none mt-[158px] ml-[128px] lg:mt-[478px] lg:ml-8">❮</a>
+
+                        <a href="#slide3"
+                            class="btn btn-circle  bg-[#131318] text-[#FFF] border-none mt-[158px] mr-[133px] lg:ml-4">❯</a>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main>
+        <section class="container font-manrope mt-[180px] lg:mt-[100px]">
+            <div class="ml-14">
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+                <div class=" w-[340px] lg:w-[1170px] my-6 lg:my-8">
+                    <h1 class="text-center  text-[22px] lg:text-3xl not-italic font-extrabold leading-normal">
+                        Professional Hockeys Club</h1>
+                    <p
+                        class="text-center w-[292px] text-[14px] leading-6 ml-5 mt-4 lg:w-[607px] lg:ml-[292px] lg:mt-6 lg:text-[16px] not-italic font-medium lg:leading-[26px] ">
+                        Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="container font-manrope  lg:w-[1440px] ">
+            <div class="lg:flex lg:w-[1170px] lg:ml-[50px]">
+                <div>
+                    <div class="relative mt-6 ml-[178px] lg:ml-[100px] mb-6">
+                        <img src="Images/Group 9.svg" alt="">
+                        <p class="absolute -mt-[78px] ml-[33px] text-[28px] not-italic font-extrabold leading-normal">
+                            87%</p>
+                    </div>
+
+                    <div class="mb-4 lg:ml-[60px]">
+                        <h3 class="text-[20px] not-italic font-semibold leading-normal text-center">Prayer Facility</h3>
+                    </div>
+
+                    <p
+                        class="w-[250px] h-[52px] opacity-60 text-[16px] not-italic font-normal leading-normal text-center lg:ml-[50px] ml-[120px]">
+                        Amet consectetur. Condimentum dignissim adipiscing .</p>
+
+                </div>
+
+                <div>
+                    <div class="relative mt-6 ml-[178px] lg:ml-[100px] mb-6">
+                        <img src="Images/Group 10.svg" alt="">
+                        <p class="absolute -mt-[78px] ml-[33px] text-[28px] not-italic font-extrabold leading-normal">
+                            95%</p>
+                    </div>
+                    <div class="mb-4 ml-[160px] lg:ml-[70px]">
+                        <h3 class="text-[20px] w-[185px] not-italic font-semibold leading-normal text-center">
+                            Experienced Coach
+                        </h3>
+                    </div>
+                    <p
+                        class="w-[250px] h-[52px] opacity-60 text-[16px] not-italic font-normal leading-normal text-center lg:ml-[50px] ml-[120px]">
+                        Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+                <div>
+                    <div class="relative mt-6 ml-[178px] lg:ml-[100px] mb-6">
+                        <img src="Images/Group 11.svg" alt="">
+                        <p class="absolute -mt-[78px] ml-[33px] text-[28px] not-italic font-extrabold leading-normal">
+                            90%</p>
+                    </div>
+                    <div class="mb-4 lg:ml-[30px]">
+                        <h3 class="text-[20px] not-italic font-semibold leading-normal text-center">Senior Player</h3>
+                    </div>
+                    <p
+                        class="w-[250px] h-[52px] opacity-60 text-[16px] not-italic font-normal leading-normal text-center lg:ml-[50px] ml-[120px]">
+                        Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+                <div>
+                    <div class="relative mt-6 ml-[178px] lg:ml-[100px] mb-6">
+                        <img src="Images/Group 12.svg" alt="">
+                        <p class="absolute -mt-[78px] ml-[33px] text-[28px] not-italic font-extrabold leading-normal">
+                            80%</p>
+                    </div>
+                    <div class="mb-4 ml-[160px] lg:ml-[90px]">
+                        <h3 class="text-[20px] w-[153px] not-italic font-semibold leading-normal text-center">Training
+                            Ground</h3>
+                    </div>
+                    <p
+                        class="w-[250px] h-[52px] opacity-60 text-[16px] not-italic font-normal leading-normal text-center lg:ml-[50px] ml-[120px]">
+                        Amet consectetur. Condimentum dignissim adipiscing .</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container font-manrope mt-[40px] lg:mt-[100px]">
+            <div class="ml-14">
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+                <div class=" w-[340px] lg:w-[1170px] my-6 lg:my-8">
+                    <h1 class="text-center  text-[22px] lg:text-3xl not-italic font-extrabold leading-normal">Program
+                        Sections</h1>
+                    <p
+                        class="text-center w-[292px] text-[14px] leading-6 ml-5 mt-4 lg:w-[607px] lg:ml-[292px] lg:mt-6 lg:text-[16px] not-italic font-medium lg:leading-[26px] ">
+                        Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="container  font-manrope mt-6 lg:mt-12">
+            <div class=" ml-16 mr-5 lg:flex lg:justify-evenly items-center">
+                <div>
+                    <div
+                        class="bg-[url(./Images/hokeybad.png)] bg-no-repeat bg-cover w-[335px] h-[244px] rounded-xl lg:rounded-2xl lg:w-[573px] lg:h-[338px]">
+                        <div class=" pt-6 pl-6 lg:pt-24 lg:pl-10">
+                            <h3 class="text-[#FFF] text-[20px] lg:text-[28px] not-italic font-extrabold leading-normal">
+                                Junior Program</h3>
+                            <p
+                                class="text-[#FFF] w-[277px] text-[14px] mt-3 lg:w-[495px] lg:text-[16px] not-italic font-medium leading-[26px] lg:mt-4">
+                                Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                                congue sed et in.</p>
+                        </div>
+                        <button
+                            class="btn btn-xs mt-5 ml-6 py-2 px-4 w-[156px] h-[41px] lg:w-[182px] lg:h-[50px] lg:py-[10px] lg:px-[22px] lg:
+                            rounded-lg border-solid border-[#FF4240] bg-[#FF4240] text-[#FFF] text-[18px] lg:text-[20px] not-italic font-bold leading-normal lg:mt-6 lg:ml-10">Register
+                            Now!</button>
+                    </div>
+                </div>
+                <div class=" mt-6 lg:mt-0">
+                    <div
+                        class="bg-[url(./Images/Hokeyfield.png)] bg-no-repeat bg-cover w-[335px] h-[244px] rounded-xl lg:rounded-2xl lg:w-[573px] lg:h-[338px]">
+                        <div class=" pt-6 pl-6 lg:pt-24 lg:pl-10">
+                            <h3 class="text-[#FFF] text-[20px] lg:text-[28px] not-italic font-extrabold leading-normal">
+                                Teenager Program</h3>
+                            <p
+                                class="text-[#FFF] w-[277px] text-[14px] mt-3 lg:w-[495px] lg:text-[16px] not-italic font-medium leading-[26px] lg:mt-4">
+                                Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                                congue sed et in.</p>
+                        </div>
+                        <button
+                            class="btn btn-xs mt-5 ml-6 py-2 px-4 w-[156px] h-[41px] lg:w-[182px] lg:h-[50px] lg:py-[10px] lg:px-[22px] lg:
+                            rounded-lg border-solid border-[#FF4240] bg-[#FF4240] text-[#FFF] text-[18px] lg:text-[20px] not-italic font-bold leading-normal lg:mt-6 lg:ml-10">Register
+                            Now!</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ml-16 mr-5 ">
+                <div class=" mt-6 lg:flex lg:justify-center lg:mt-6">
+                    <div
+                        class="bg-[url(./Images/hokeyplayer.png)] bg-no-repeat bg-cover w-[335px] h-[244px] rounded-xl lg:rounded-2xl lg:w-[1170px] lg:h-[450px]">
+                        <div class=" pt-6 pl-6 lg:pt-52 lg:pl-10">
+                            <h3 class="text-[#FFF] text-[20px] lg:text-[28px] not-italic font-extrabold leading-normal">
+                                Professional Program</h3>
+                            <p
+                                class="text-[#FFF] w-[277px] text-[14px] mt-3 lg:w-[495px] lg:text-[16px] not-italic font-medium leading-[26px] lg:mt-4">
+                                Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                                enim sagittis turpis in magna. Id et sed euismod natoque amet nunc morbi nulla. Tortor
+                                congue sed et in.</p>
+                        </div>
+                        <button
+                            class="btn btn-xs mt-5 ml-6 py-2 px-4 w-[156px] h-[41px] lg:w-[182px] lg:h-[50px] lg:py-[10px] lg:px-[22px] lg:
+                                rounded-lg border-solid border-[#FF4240] bg-[#FF4240] text-[#FFF] text-[18px] lg:text-[20px] not-italic font-bold leading-normal lg:mt-6 lg:ml-10">Register
+                            Now!</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container font-manrope mt-[40px] lg:mt-[100px]">
+            <div class="ml-14">
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+                <div class=" w-[340px] lg:w-[1170px] my-6 lg:my-8">
+                    <h1 class="text-center  text-[22px] lg:text-3xl not-italic font-extrabold leading-normal">Our New
+                        Products</h1>
+                    <p
+                        class="text-center w-[292px] text-[14px] leading-6 ml-5 mt-4 lg:w-[607px] lg:ml-[292px] lg:mt-6 lg:text-[16px] not-italic font-medium lg:leading-[26px] ">
+                        Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="container font-manrope ml-[70px] lg:ml-5 mt-12">
+            <div class="lg:flex lg:justify-evenly justify-center">
+                <div>
+                    <div>
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit  w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/5.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2
+                                        class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal ">
+                                        World Cup Flags Football</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit mt-6 w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/7.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2 class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal">
+                                        Cap For Hockeys</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit mt-6 w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/9.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2 class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal">
+                                        World Cup Flags Football</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div>
+                    <div>
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit mt-6 lg:mt-0  w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/6.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2 class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal">
+                                        World Cup Flags Football</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit mt-6  w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/8.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2 class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal">
+                                        World Cup Flags Football</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div
+                            class="card lg:card-side bg-white shadow-xl border border-inherit  mt-6  w-[340px] h-[453px]  lg:w-[573px] lg:h-[218px] lg:mb-6">
+                            <figure class="lg:ml-6 mt-4 mb-0">
+                                <img class="w-[287px] h-[210px] lg:w-[180px] lg:h-[172px]" src="Images/10.png"
+                                    alt="Album" />
+                            </figure>
+                            <div class="card-body">
+
+                                <div class="flex gap-4">
+                                    <div class="flex gap-2">
+                                        <img src="Images/star.svg" alt="">
+                                        <p>5.0</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/eye.png" alt="">
+                                        <p>20</p>
+                                    </div>
+                                    <div class="flex gap-2">
+                                        <img src="Images/love.png" alt="">
+                                        <p>200</p>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <h2 class="card-title lg:mt-2 text-[20px] not-italic font-extrabold leading-normal">
+                                        World Cup Flags Football</h2>
+                                    <p class="lg:w-[306px] lg:mt-2 opacity-65 mt-3">Dolor sit amet consectetur. Ut urna
+                                        diam quis sagittis. </p>
+                                </div>
+
+                                <div class=" mt-0 lg:flex gap-4 lg:mt-2 lg:w-[307px] h-[22px]  ">
+                                    <div class="">
+                                        <p
+                                            class=" text-[#FF4240] lg:text-[18px] not-italic font-extrabold  leading-[26px]">
+                                            Price - $22.00</p>
+                                    </div>
+
+                                    <div class="flex gap-2 mt-0">
+                                        <img src="Images/cart.svg" alt="">
+                                        <p class="text-[16px] not-italic font-medium leading-normal">Delivery Fee : Free
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container font-manrope mt-[40px] lg:mt-[100px]">
+            <div class="ml-14">
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+                <div class=" w-[340px] lg:w-[1170px] my-6 lg:my-8">
+                    <h1 class="text-center  text-[22px] lg:text-3xl not-italic font-extrabold leading-normal">Clients
+                        Question</h1>
+                    <p
+                        class="text-center w-[292px] text-[14px] leading-6 ml-5 mt-4 lg:w-[607px] lg:ml-[292px] lg:mt-6 lg:text-[16px] not-italic font-medium lg:leading-[26px] ">
+                        Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="container font-manrope lg:w-[1440px]">
+
+            <div
+                class="lg:flex lg:justify-evenly justify-center bg-white shadow-xl border border-inherit w-[340px] h-[702px] lg:mt-12 lg:w-[1170px] lg:h-[534px] mx-auto rounded-2xl">
+                <div class=" mx-6 my-6 lg:ml-8 lg:mt-8 lg:mb-8">
+                    <img class=" w-[287px] h-[200px] lg:w-[441px] lg:h-[470px]" src="Images/11.png" alt="">
+                </div>
+                <div class="lg:mt-8 lg:mb-8 lg:ml-10 lg:mr-10">
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" checked="checked" />
+                        <div class="collapse-title text-xl font-medium">Our Equipment</div>
+                        <div class="collapse-content">
+                            <p class="lg:w-[518px]">Dolor sit amet consectetur. Ut urna diam quis sagittis. Elit elit
+                                enim sagittis turpis in magna.</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium">Hockey Training</div>
+                        <div class="collapse-content">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium">Private Lessons</div>
+                        <div class="collapse-content">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium">Ski Touring</div>
+                        <div class="collapse-content">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium">Booking</div>
+                        <div class="collapse-content">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                    <div class="collapse collapse-plus bg-white">
+                        <input type="radio" name="my-accordion-3" />
+                        <div class="collapse-title text-xl font-medium">Pricings</div>
+                        <div class="collapse-content">
+                            <p>hello</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container font-manrope mt-[40px] lg:mt-[100px]">
+            <div class="ml-14">
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+                <div class=" w-[340px] lg:w-[1170px] my-6 lg:my-8">
+                    <h1 class="text-center  text-[22px] lg:text-3xl not-italic font-extrabold leading-normal">Get In
+                        Touch</h1>
+                    <p
+                        class="text-center w-[292px] text-[14px] leading-6 ml-5 mt-4 lg:w-[607px] lg:ml-[292px] lg:mt-6 lg:text-[16px] not-italic font-medium lg:leading-[26px] ">
+                        Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna
+                        in sit nullam proin. </p>
+                </div>
+                <svg class=" w-[350px] h-[1px] lg:w-[1170px] lg:h-[1px]" viewBox="0 0 1170 1" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <line x1="4.37114e-08" y1="0.5" x2="1170" y2="0.500102" stroke="#131318" stroke-opacity="0.2"
+                        stroke-dasharray="5 5" />
+                </svg>
+            </div>
+        </section>
+    
+        <section class="container font-manrope lg:w-[1440px]">
+            <div class="w-[375px] lg:w-[1170px] lg:flex mt-[48px] lg:justify-around justify-center mx-auto">
+
+                <div
+                    class=" w-[340px] h-[664px] mx-auto lg:w-[474px] lg:h-[830px] bg-white shadow-xl border border-inherit rounded-2xl">
+                    <div
+                        class="bg-lime-50 rounded-2xl w-[287px] h-[184px] mt-6 ml-6 mr-6 mb-4 lg:w-[374px] lg:h-[216px] lg:mt-[50px] lg:ml-[50px] lg:mr-[50px]">
+                        <img class=" pt-8 ml-8" src="Images/Group 1171275317.png" alt="">
+                        <p class="w-[150px] mt-[24px] ml-8">Phone Number:(+62) 123-321-543</p>
+                    </div>
+                    <div
+                        class="bg-yellow-50 rounded-2xl w-[287px] h-[184px] mt-6 ml-6 mr-6 mb-4 lg:w-[374px] lg:h-[216px] lg:mt-[24px] lg:ml-[50px] lg:mr-[50px]">
+                        <img class=" pt-8 ml-8" src="Images/Group 1171275318.png" alt="">
+                        <p class="w-[150px] mt-[24px] ml-8">Email :
+                            hockeys@support.com</p>
+                    </div>
+                    <div
+                        class="bg-cyan-50 rounded-2xl w-[287px] h-[184px] mt-4 ml-6 mr-6 mb-6 lg:w-[374px] lg:h-[216px] lg:mt-[24px] lg:ml-[50px] lg:mr-[50px] lg:mb-[50px]">
+                        <img class=" pt-8 ml-8" src="Images/Group 1171275321.png" alt="">
+                        <p class="w-[110px] mt-[24px] ml-8">Location :
+                            152/1 Mohakhali Wireless Gate</p>
+                    </div>
+                </div>
+                <div class=" mt-6 lg:mt-0 lg:ml-6">
+                    <div class="lg:flex gap-6">
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text text-[20px] not-italic font-bold leading-normal">Your
+                                        Name</span>
+
+                                </div>
+                                <input type="text" placeholder="Enter your full name"
+                                    class="input bg-neutral-100 rounded-xl w-[340px]  lg:w-[324px] h-[64px]" />
+                            </label>
+                        </div>
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text text-[20px] not-italic font-bold leading-normal">Your
+                                        Email</span>
+
+                                </div>
+                                <input type="text" placeholder="Enter your email"
+                                    class="input bg-neutral-100 rounded-xl w-[340px] lg:w-[324px] h-[64px]" />
+                            </label>
+                        </div>
+
+                    </div>
+
+                    <div class="lg:flex gap-6">
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span
+                                        class="label-text text-[20px] not-italic font-bold leading-normal">Subject</span>
+
+                                </div>
+                                <input type="text" placeholder="Enter your subject"
+                                    class="input bg-neutral-100 rounded-xl w-[340px] lg:w-[324px] h-[64px]" />
+                            </label>
+                        </div>
+                        <div>
+                            <label class="form-control w-full max-w-xs">
+                                <div class="label">
+                                    <span class="label-text text-[20px] not-italic font-bold leading-normal">Phone
+                                        Number</span>
+
+                                </div>
+                                <input type="text" placeholder="Enter your phone number"
+                                    class="input bg-neutral-100 rounded-xl w-[340px] lg:w-[324px] h-[64px] " />
+                            </label>
+                        </div>
+
+                    </div>
+                    <div>
+                        <label class="form-control w-full max-w-xs">
+                            <div class="label">
+                                <span class="label-text text-[20px] not-italic font-bold leading-normal">Message</span>
+
+                            </div>
+                            <input type="text" placeholder="Write your message"
+                                class="input bg-neutral-100 rounded-xl w-[340px] h-[200px] lg:w-[672px] lg:h-[500px]" />
+                        </label>
+                    </div>
+
+                    <button
+                        class="btn bg-[#FF4240] text-[#FFF] mt-8 w-[340px] h-[57px] my-2  lg:my-4 lg:w-[672px] lg:h-12 text-[20px] not-italic font-bold leading-normal">Send
+                        Message</button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="container font-manrope lg-w-[1440px]">
+            <div
+                class=" w-[340px] h-[140px]  lg:w-[1170px] lg:h-[150px] ml-[52px] mr-[50px] mt-[40px] lg:mx-auto lg:mt-12 bg-gray-100 rounded-xl">
+                <div class="">
+                    <h3
+                        class=" pt-[30px] ml-[92px] mr-[93px] lg:ml-[510px] lg:mr-[510px] text-[24px] not-italic font-extrabold leading-normal">
+                        Social Media</h3>
+                    <div class="ml-[80px] mr-[80px] mt-6 lg:pb-[34px] lg:ml-[498px] lg:mr-[496px]">
+                        <img class="w-[175px] h-[24px]" src="Images/Social.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class=" container bg-slate-900 mt-10 lg:mt-[100px] w-[450px] lg:w-[1440px] mx-auto">
+        <div class="footer text-base-content p-10 w-[1170px] mx-auto">
+            <aside>
+                <div class="lg:mt-[100px]  lg:mb-[135px]">
+                    <h2
+                        class="text-[#FFF] ml-[113px] mr-[113px] lg:mr-0 lg:ml-0 text-[24px] lg:text-[28px] not-italic font-extrabold leading-normal">
+                        Get In Touch</h2>
+                    <p
+                        class=" ml-[60px] mr-[39px] mt-[16px]  lg:ml-0 lg:mr-0 w-[297px] lg:w-[346px] text-[#FFF] text-[16px] not-italic font-medium leading-[26px]">
+                        Dit amet consectetur. Condimentum adipiscing aliquam turpis placerat dolor. Purus urna in sit
+                        nullam proin. </p>
+                    <div class="flex gap-4 ml-[81px] mr-[80px] lg:ml-0 lg:mr-0 mt-[25px]">
+                        <img src="Images/Framem.png" alt="">
+                        <p class="text-[#FFF]">hockeys@support.com</p>
+                    </div>
+                    <div class="flex gap-4 ml-[81px] mr-[80px] lg:ml-0 lg:mr-0 mt-[25px] mt-[18px]">
+                        <img src="Images/Framep.png" alt="">
+                        <p class="text-[#FFF]">(+62) 123-321-543</p>
+                    </div>
+                </div>
+            </aside>
+            <div class="footer lg:mt-[100px] lg:mb-[135px] lg:mr-[185px]">
+                <div class="flex footer lg:justify-evenly ml-[70px] mr-[77px] lg:ml-0 lg:mr-0">
+                    <nav class=" mr-[72px] lg:mr-[60px] lg:ml-[170px]">
+                        <h6 class="text-[#FFF] text-[18px] not-italic font-bold leading-normal">Company</h6>
+                        <a class="link link-hover text-[#FFF] mt-[29px]">About us</a>
+                        <a class="link link-hover text-[#FFF]">Leadership</a>
+                        <a class="link link-hover text-[#FFF]">Carrers</a>
+                        <a class="link link-hover text-[#FFF]">News & Artical</a>
+                        <a class="link link-hover text-[#FFF]">Legal Notice</a>
+                    </nav>
+                    <nav>
+                        <h6 class=" text-[#FFF] text-[18px] not-italic font-bold leading-normal">Support</h6>
+                        <a class="link link-hover text-[#FFF] mt-[29px]">Help Center</a>
+                        <a class="link link-hover text-[#FFF]">FAQ</a>
+                        <a class="link link-hover text-[#FFF]">Ticket Support</a>
+                        <a class="link link-hover text-[#FFF]">Contract Us</a>
+                    </nav>
+                </div>
+
+                <nav class=" ml-[150px] mr-[149px] mt-10 lg:mt-0 lg:mr-0 lg:ml-[50px]">
+                    <h6 class=" text-[#FFF] text-[18px] not-italic font-bold leading-normal">Services</h6>
+                    <a class="link link-hover text-[#FFF] mt-[29px]">Academy</a>
+                    <a class="link link-hover text-[#FFF]">Group Lesson</a>
+                    <a class="link link-hover text-[#FFF]">Private Lesson</a>
+                    <a class="link link-hover text-[#FFF]">Hockeys for Kid</a>
+                    <a class="link link-hover text-[#FFF]">Hockeys for Adult</a>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
